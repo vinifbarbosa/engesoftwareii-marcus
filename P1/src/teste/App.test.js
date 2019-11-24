@@ -1,12 +1,12 @@
 import React from 'react';
-import App from './App';
+import App from '../App';
 import {Route,MemoryRouter} from 'react-router-dom';
 import {shallow, configure, mount} from 'enzyme';
 import adapter from 'enzyme-adapter-react-16';
-import Menu from './components/menu/Menu';
-import Lista from './pages/lista/Lista';
-import CriarLista from './pages/lista/CriarLista';
-import Listas from './pages/lista/Listas';
+import Menu from '../components/menu/Menu';
+import Lista from '../pages/lista/Lista';
+import CriarLista from '../pages/lista/CriarLista';
+import Listas from '../pages/lista/Listas';
 
 
 configure({adapter: new adapter()});
