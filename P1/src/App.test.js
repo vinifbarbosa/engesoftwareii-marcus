@@ -33,3 +33,31 @@ describe('Teste de rotas', () =>{
     expect(Listas).toBe(Listas);
   })
 });
+test('/Menu utilizando Memory route', () => {
+  const envolpe = mount(
+    <MemoryRouter initialEntries={['/Menu']}><App/></MemoryRouter>
+  );
+  expect(envolpe.find(Menu)).toHaveLength(1);
+});
+
+/////////////////////////////////////////////////////
+
+//OLHA EU NÃO SEI SE É NECESSARIO UTILIZAR ESSES OUTROS !!!!!!!
+test('/Lista utilizando Memory route', () => {
+  const envolpe = mount(
+    <MemoryRouter initialEntries={['/Lista']}><App/></MemoryRouter>
+  );
+  expect(envolpe.find(Lista)).toHaveLength(0);
+});
+test('/CriarLista utilizando Memory route', () => {
+  const envolpe = mount(
+    <MemoryRouter initialEntries={['/CriarLista']}><App/></MemoryRouter>
+  );
+  expect(envolpe.find(CriarLista)).toHaveLength(0);
+});
+test('/Lista utilizando Memory route', () => {
+  const envolpe = mount(
+    <MemoryRouter initialEntries={['/Lista']}><App/></MemoryRouter>
+  );
+  expect(envolpe.find(Lista)).toHaveLength(0);
+});
